@@ -15,7 +15,14 @@ function App() {
     };
 
     if (showMenu) {
-        return <Menu />;
+        return (
+            <div className="wrapper">
+                <Header text="Pizza Day" />
+                <main className="content-menu">
+                    <Menu />
+                </main>
+            </div>
+        );
     }
 
     return (

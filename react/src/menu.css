@@ -1,11 +1,16 @@
-ul {
-    padding-left: 2%;
+.content-menu {
+    padding-top: 60px;
 }
 
 .pizza {
     display: flex;
     gap: 16px;
-    padding: 8px 0;
+    padding: 8px 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+.pizza:last-child {
+    border-bottom: 0;
 }
 
 .pizza__image {
@@ -16,10 +21,11 @@ ul {
 .pizza__info {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .pizza__name {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .pizza__ingredients {
@@ -34,5 +40,5 @@ ul {
 }
 
 .pizza__price {
-    font-size: 14px;
+    font-size: 20px;
 }
