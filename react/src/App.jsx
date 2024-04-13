@@ -1,9 +1,23 @@
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
+import Menu from './components/Menu/Menu';
+import { useState } from 'react';
 import './index.css';
 import './login.css';
+import './menu.css';
 
 function App() {
+    const [showMenu, setShowMenu] = useState(false);
+
+    const handleShowMenu = (e) => {
+        e.preventDefault();
+        setShowMenu(true);
+    };
+
+    if (showMenu) {
+        return <Menu />;
+    }
+
     return (
         <>
             <div className="wrapper">
@@ -23,6 +37,7 @@ function App() {
                         inputType="text"
                         placeholder="Your full name"
                         btnText="Login"
+                        handleShowMenu={handleShowMenu}
                     />
                 </main>
             </div>

@@ -1,11 +1,24 @@
+import React, { useState } from 'react';
+
 const Form = (props) => {
-    const { btnText, inputType, placeholder } = props;
+    const { btnText, inputType, placeholder, handleShowMenu } = props;
+
+    const [value, setValue] = useState('');
+
+    const handleInputChange = (e) => {
+        setValue(e.target.value);
+    };
 
     return (
-        <div className="login-form">
-            <input type={inputType} placeholder={placeholder} />
-            <button>{btnText}</button>
-        </div>
+        <form className="login-form" onSubmit={handleShowMenu}>
+            <input
+                type={inputType}
+                placeholder={placeholder}
+                value={value}
+                onChange={handleInputChange}
+            />
+            <button type="submit">{btnText}</button>
+        </form>
     );
 };
 
