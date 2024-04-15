@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import PizzaCounter from '../PizzaCounter/PizzaCounter';
 
 const MenuItem = (props) => {
     const { name, unitPrice, imageUrl, ingredients, soldOut } = props;
 
     const [isVisible, setIsVisible] = useState(true);
+    const [counter, setCounter] = useState(1);
 
     const handleButtonClick = (e) => {
         e.preventDefault();
@@ -36,7 +36,22 @@ const MenuItem = (props) => {
                             </button>
                         )}
                         {!isVisible && (
-                            <PizzaCounter closeClick={handleButtonClickClose} />
+                            <div className="pizza-counter">
+                                <button
+                                    onClick={() => setCounter(counter - 1)}
+                                    disabled={counter === 1}>
+                                    -
+                                </button>
+                                <span className="pizza-count">{counter}</span>
+                                <button onClick={() => setCounter(counter + 1)}>
+                                    +
+                                </button>
+                                <button
+                                    className="button-delete"
+                                    onClick={handleButtonClickClose}>
+                                    Delete
+                                </button>
+                            </div>
                         )}
                     </div>
                 )}

@@ -10,8 +10,13 @@ const Menu = () => {
                 const res = await fetch(
                     'https://react-fast-pizza-api.onrender.com/api/menu'
                 );
+
+                if (!res.ok) {
+                    throw new Error('Failed to fetch')
+                }
+
                 const { data } = await res.json();
-                console.log(data);
+                
                 setPizzas(data);
             };
 
