@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Form = (props) => {
-    const { btnText, inputType, placeholder, handleShowMenu } = props;
+    const { btnText, inputType, placeholder } = props;
 
     const [value, setValue] = useState('');
 
@@ -10,14 +11,16 @@ const Form = (props) => {
     };
 
     return (
-        <form className="login-form" onSubmit={handleShowMenu}>
+        <form className="login-form">
             <input
                 type={inputType}
                 placeholder={placeholder}
                 value={value}
                 onChange={handleInputChange}
             />
-            <button type="submit">{btnText}</button>
+            <Link to="/menu">
+                <button type="submit">{btnText}</button>
+            </Link>
         </form>
     );
 };

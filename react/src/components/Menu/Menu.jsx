@@ -22,7 +22,7 @@ const Menu = () => {
     }, []);
 
     return (
-        <ul>
+        <ul className="menu-pizzas">
             {pizzas.map((obj) => {
                 const { id, name, unitPrice, imageUrl, ingredients, soldOut } =
                     obj;

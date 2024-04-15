@@ -1,25 +1,8 @@
-import React, { useState } from 'react';
 import Form from '../Form/Form';
-import Menu from '../Menu/Menu';
 
-const Content = () => {
-    const [showMenu, setShowMenu] = useState(false);
-
-    const handleShowMenu = (e) => {
-        e.preventDefault();
-        setShowMenu(true);
-    };
-
-    if (showMenu) {
-        return (
-            <main className="content-menu">
-                <Menu />
-            </main>
-        );
-    }
-
+const Login = () => {
     return (
-        <main className="content">
+        <main className="login">
             <h1 className="title">
                 The best pizza.
                 <br />
@@ -34,10 +17,9 @@ const Content = () => {
                 inputType="text"
                 placeholder="Your full name"
                 btnText="Login"
-                handleShowMenu={handleShowMenu}
             />
         </main>
     );
 };
 
-export default Content;
+export default Login;

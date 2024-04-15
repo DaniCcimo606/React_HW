@@ -13,6 +13,10 @@
     border-bottom: 0;
 }
 
+.menu-pizzas {
+    margin-top: 60px;
+}
+
 .pizza__image {
     width: 100px;
     height: 100px;

@@ -39,9 +39,21 @@ input:focus {
 }
 
 .logo {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 2px solid black;
+    font-size: 24px;
+}
+
+.nav-link,
+.logo {
     text-decoration: none;
-    font-size: 20px;
     color: rgb(68, 64, 60);
+}
+
+.nav-link {
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .header {
@@ -51,12 +63,15 @@ input:focus {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: rgb(234, 179, 8);
     padding: 15px 20px;
 }
 
 .content {
+    text-align: center;
+}
+
+.login {
     text-align: center;
 }
 
