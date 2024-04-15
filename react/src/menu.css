@@ -42,3 +42,22 @@
 .pizza__price {
     font-size: 20px;
 }
+
+.pizza-counter {
+    display: flex;
+}
+
+.pizza-count {
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+    padding: 0 13px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(234, 179, 8);
+}
+
+.button-delete {
+    margin-left: 30px;
+}
