@@ -1,8 +1,26 @@
-import React from 'react';
-import pizzas from '../../data';
+import React, { useEffect, useState } from 'react';
 import MenuItem from '../MenuItem/MenuItem';
 
 const Menu = () => {
+    const [pizzas, setPizzas] = useState([]);
+
+    useEffect(() => {
+        try {
+            const getPizzas = async () => {
+                const res = await fetch(
+                    'https://react-fast-pizza-api.onrender.com/api/menu'
+                );
+                const { data } = await res.json();
+                console.log(data);
+                setPizzas(data);
+            };
+
+            getPizzas();
+        } catch (error) {
+            console.error(error.message);
+        }
+    }, []);
+
     return (
         <ul>
             {pizzas.map((obj) => {

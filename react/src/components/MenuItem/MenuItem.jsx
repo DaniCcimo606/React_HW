@@ -3,7 +3,6 @@ import PizzaCounter from '../PizzaCounter/PizzaCounter';
 
 const MenuItem = (props) => {
     const { name, unitPrice, imageUrl, ingredients, soldOut } = props;
-    console.log(ingredients);
 
     const [isVisible, setIsVisible] = useState(true);
 
